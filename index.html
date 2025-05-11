@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lani & Dani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/fav.png" type="images/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <img src="images/slider-1.jpg" alt="Banner Lani Dani" class="banner">
+    <div class="slider">
+        <div class="slides">
+            <img src="./images/slider-1.jpg" alt="Banner 1" class="slide active">
+            <img src="./images/slider-2.jpg" alt="Banner 2" class="slide">
+            <img src="./images/slider-3.jpg" alt="Banner 3" class="slide">
+        </div>
+    </div>
+
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -30,10 +39,52 @@
     <main>
         <section class="about_section">
             <div class="about_content">
-
+                <div class="row align-items-center about_row">
+                    <div class="col-md-6">
+                        <p class="about_us">Chúng tôi là ai?</p>
+                        <h1>Công ty LANI & DANI</h1>
+                        <p>
+                            <span class="highlight">Tự hào là công ty đầu tiên tại Việt Nam cung cấp dịch vụ trọn gói</span>
+                            trong lĩnh vực tư vấn, thiết kế, xây dựng sân Golf, cung ứng nguồn lực, dịch vụ huấn luyện,
+                            quản lý và hậu cần cho dịch vụ Golf.
+                        </p>
+                        <p>
+                            Chúng tôi còn hoạt động trong lĩnh vực xây lắp và đầu tư xây dựng các công trình dân dụng,
+                            nhà xưởng công nghiệp, công trình hạ tầng kỹ thuật, đường giao thông, cầu cảng, bờ kè, cầu
+                            cống, nạo vét sông rạch, xây dựng các công trình thuỷ lợi, thi công san lấp mặt bằng,
+                            sản xuất và kinh doanh vật liệu xây dựng.
+                        </p>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center image_row">
+                        <img src="./images/introduction-girl.jpg" alt="woman with golf equipment" class="welcome_img woman_img">
+                        <img src="./images/introduction-man.jpg" alt="man posing" class="welcome_img man_img">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }, 3000);
+
+        showSlide(currentSlide);
+    </script>
 </body>
 
 </html>
