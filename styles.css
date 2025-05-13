@@ -29,7 +29,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1.25s ease-in-out;
+    transition: opacity 1s ease-in-out;
     filter: brightness(80%);
 }
 
@@ -219,13 +219,13 @@ body {
 .services_content .content_header {
     color: rgb(12, 126, 18);
     font-weight: 650;
-    font-size: 1em;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
 .services_content h1 {
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 35px;
     color: #1a3c34;
     margin-bottom: 20px;
 }
@@ -241,7 +241,7 @@ body {
 }
 
 .services_content p {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 40px;
@@ -278,14 +278,14 @@ body {
 }
 
 .card_title {
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 700;
     color: #1a3c34;
     margin-top: 2px;
 }
 
 .card_body p {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: #666;
     margin: 0;
 }
@@ -312,13 +312,13 @@ body {
 .other_services_content .other_services_header {
     color: rgb(12, 126, 18);
     font-weight: 650;
-    font-size: 1em;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
 .other_services_content h1 {
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 35px;
     color: #1a3c34;
     margin-bottom: 20px;
 }
@@ -334,7 +334,7 @@ body {
 }
 
 .other_services_content p {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 40px;
